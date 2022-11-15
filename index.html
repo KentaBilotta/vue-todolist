@@ -8,11 +8,17 @@
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- vue script -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
     <!-- script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div id="container">
+        <h1>{{ title }}</h1>
+        <div class="list">
+            <div v-for="todo in toDoList" class="list-item">{{ todo.text }}</div>
+        </div>
+    </div>
     
 </body>
 </html>

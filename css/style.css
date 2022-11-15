@@ -3,3 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.list{
+    width: 700px;
+    background-color: lightgrey;
+    margin: auto;
+}
+
+.list-item{
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.red{
+    color: red;
+}
