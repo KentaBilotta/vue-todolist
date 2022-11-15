@@ -22,15 +22,9 @@ const app = new Vue({
             {
                 text: "Vai in posta",
                 done: true,
-            },
-        ],
-        doneItem: "done",
+            }
+        ]
     },
     methods: {
-        doneOrNot: function() {
-            if (this.toDoList[1].done == true) {
-                
-            }
-        }
     }
 });
