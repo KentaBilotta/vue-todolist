@@ -11,20 +11,22 @@ const app = new Vue({
                 text: "Fare la spesa",
                 done: true,
             },
-            {
-                text: "Porta fuori il cane",
-                done: false,
-            },
-            {
-                text: "Vai in palestra",
-                done: true,
-            },
-            {
-                text: "Vai in posta",
-                done: true,
-            }
-        ]
+        ],
+        newToDo: "",
     },
     methods: {
+        doneOrNot(status) {
+            status.done = !status.done;
+        },
+        addNewToDo() {
+            this.toDoList.push({
+                text: this.newToDo,
+                done: false,
+            })
+            this.newToDo = ""
+        },
+        removeToDo(index) {
+            this.toDoList.splice(index, 1);
+        }
     }
 });

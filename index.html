@@ -17,10 +17,15 @@
 <body>
     <div id="container">
         <h1>{{ title }}</h1>
+        <div class="form">
+            <input type="text" placeholder="add new todo" v-model="newToDo" @keyup.enter="addNewToDo">
+            <button @click="addNewToDo">Aggiungi</button>
+        </div>
+        <h2 v-show="toDoList.length === 0">Non ci sono cose da fare!</h2>
         <div class="list">
-            <div v-for="todo in toDoList" :style= " todo.done == true ? {textDecoration: 'line-through'} : '' " class="list-item">
+            <div v-for="(todo, index) in toDoList" :style= " todo.done == true ? {textDecoration: 'line-through'} : '' " class="list-item" @click="doneOrNot(todo)">
                 {{ todo.text }}
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
             </div>
         </div>
     </div>
